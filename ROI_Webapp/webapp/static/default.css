@@ -1,0 +1,54 @@
+body {
+  padding: 0  !important;
+  margin: 0!important;
+  box-sizing: border-box;
+  max-width: 1400px;
+  background-color: #4F6050;
+}
+
+.bg-creamy {
+  background-color: #EEE5AF;
+}
+
+.cr-3 {
+  border-radius: 3em;
+}
+
+.min-width-170 {
+  min-width: 170px;
+}
+
+.min-width-150 {
+  min-width: 50px;
+}
+
+.max-width-1200 {
+  max-width: 1200px;
+}
+
+.min-width-120 {
+  min-width: 125px;
+}
+
+.width-94 {
+  width: 94%;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+label {
+  font-weight: 500;
+  padding-top: 1rem;
+  cursor: pointer;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

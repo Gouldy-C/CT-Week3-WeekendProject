@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}ROI Calc{% endblock %}
+{% block content %}
+<form method="POST" class="my-5 p-4 cr-3 bg-creamy max-width-1000 mx-auto">
+  <h3 align="center">Property Info</h3>
+  <div class="form-group">
+    <label for="name" data-toggle="tooltip" data-placement="right" title="Please give each property a unique and descriptive name.">Property Name or Address</label>
+    <input type="text" class="form-control width-94" id="name" name="name" placeholder="Enter Property Name or Address">
+  </div>
+
+  <h3 align="center" class='pt-4'>Monthly Income</h3>
+  <div class="form-group">
+    <label for="rental_income" data-toggle="tooltip" data-placement="right" title="The amount you are expecting to charge for this property in rent [0.00]">Rental Income</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="rental_income" name="rental_income" min='1' placeholder="Enter Rental Income"></div>
+
+    <label for="laundry" data-toggle="tooltip" data-placement="right" title="Will you charge a laundry fee [0.00]">Laundry</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="laundry" name="laundry" min='0' placeholder="Enter Laundry Income"></div>
+
+    <label for="storage" data-toggle="tooltip" data-placement="right" title="Will you charge a storage fee [0.00]">Storage</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="storage" name="storage" min='0' placeholder="Enter Storage Income"></div>
+
+    <label for="misc" data-toggle="tooltip" data-placement="right" title="Will you receive any other income from the property [0.00]">Miscellaneous</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="misc" name="misc" min='0' placeholder="Enter Misc. Income"></div>
+
+  </div>
+
+
+    <h3 align="center" class='pt-4'>Monthly Expenses</h3>
+  <div class="form-group">
+    <label for="mortgage" data-toggle="tooltip" data-placement="right" title="What will the mortgage payments be on this property [0.00]">Mortgage</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="mortgage" name="mortgage" min='1' placeholder="Enter Mortgage Expense"></div>
+
+    <label for="tax" data-toggle="tooltip" data-placement="right" title="What will you be paying in property tax each month [0.00]">Tax</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="tax" name="tax" min='0' placeholder="Enter Tax Expense"></div>
+
+    <label for="insurance" data-toggle="tooltip" data-placement="right" title="What will you be paying in property insurance each month [0.00]">Insurance</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="insurance" name="insurance" min='0' placeholder="Enter Insurance Expense"></div>
+
+    <label for="utilities" data-toggle="tooltip" data-placement="right" title="What portion of utilities if any will you be paying each month [0.00]">Utilities (Electric, Sewer, Water, Gas)</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="utilities" name="utilities" min='0' placeholder="Enter Storage Expense"></div>
+
+    <label for="hoa" data-toggle="tooltip" data-placement="right" title="Are there any HOA fees for this property [0.00]">Home Owners Association Fees</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="hoa" name="hoa" min='0' placeholder="Enter HOA Expense"></div>
+
+    <label for="lawn_snow" data-toggle="tooltip" data-placement="right" title="Will you be paying for lawn care and snow removal services [0.00]">Lawn and Snow Services</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="lawn_snow" name="lawn_snow" min='0' placeholder="Enter Lawn and Snow Services Expenses"></div>
+
+    <label for="vacancy" data-toggle="tooltip" data-placement="right" title="This is an amount to be saved every month for times of property vacancy [0.00]">Vacancy</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="vacancy" name="vacancy" min='0' placeholder="Enter An Amount To Withhold For Vacancy Expenses"></div>
+
+    <label for="repairs" data-toggle="tooltip" data-placement="right" title="This is an amount to be saved every month for property repairs [0.00]">Repairs</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="repairs" name="repairs" min='0' placeholder="Enter An Amount To Withhold For Repair Expenses"></div>
+
+    <label for="cap_ex" data-toggle="tooltip" data-placement="right" title="This is an amount to be saved every month for major property overhauls (Roof, Insolation, Air conditioning) [0.00]">Capital Expenditures</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="cap_ex" name="cap_ex" min='0' placeholder="Enter An Amount To Withhold For Capital Expenditures"></div>
+
+    <label for="prop_man" data-toggle="tooltip" data-placement="right" title="Will you pay for property management if so how much [0.00]">Property Management</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="prop_man" name="prop_man" min='0' placeholder="Enter Property Management Expense"></div>
+
+  </div>
+
+
+  <h3 align="center" class='pt-4'>Investment Expenses</h3>
+  <div class="form-group">
+    <label for="down_payment" data-toggle="tooltip" data-placement="right" title="What will you down payment be for this property, if paid in full put the pay in full amount [0.00]">Down Payment</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="down_payment" name="down_payment" min='1' placeholder="Enter Down Payment Amount"></div>
+
+    <label for="closing_costs" data-toggle="tooltip" data-placement="right" title="What were the closing costs for this property purchase [0.00]">Closing Costs</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="closing_costs" name="closing_costs" min='1' placeholder="Enter Closing Costs Amount"></div>
+
+    <label for="remodel_budget" data-toggle="tooltip" data-placement="right" title="how much would you likely need to spend to remodel this property if necessary [0.00]">Remodel Budget</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="remodel_budget" name="remodel_budget" min='0' placeholder="Enter Remodel Budget"></div>
+
+    <label for="misc_invest" data-toggle="tooltip" data-placement="right" title="This is a field for other things you might have to pay for up front to get this property [0.00]">Miscellaneous</label>
+    <div><h5 class="d-inline">$ </h5><input type="number" class="form-control d-inline width-94" id="misc_invest" name="misc_invest" min='0' placeholder="Enter Miscellaneous Investment Expenses"></div>
+
+  </div>
+
+  <br/>
+  <div class='w-100 d-flex justify-content-center'>
+    <button type="submit" class="btn btn-dark w-25 min-width-170">Calculate ROI</button>
+  </div>
+
+</form>
+{% endblock %}
